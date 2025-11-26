@@ -14,6 +14,13 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 </head>
 
 <body>
@@ -37,13 +44,16 @@
   <header class="site-header">
     <div class="header-left">
       <img src="img/2D LOGO-01.png" alt="Deepsee Logo" class="logo" />
-      <span class="brand-name">PORT US</span>
+      <!-- <span class="brand-name">PORT US</span> -->
     </div>
 
-    <div class="center">
-      <div class="eq"><span></span><span></span><span></span><span></span><span></span></div>
-      <div class="label">Sound</div>
-    </div>
+   <div class="center" onclick="playSound()">
+  <div class="eq"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="label">Sound</div>
+</div>
+
+<audio id="bgSound" src="imgs/WhatsApp Audio 2025-11-14 at 14.20.29_7efb9a9b.mp3" loop></audio>
+
 
     <nav class="header-right">
       <button class="nav-toggle">
@@ -118,7 +128,7 @@
       <div class="wave-divider">
 
         <video class="divider" autoplay muted loop playsinline>
-          <source src="/img/3295292f-6c29-4735-93c7-9b82701933a0.webm" type="video/mp4">
+          <source src="img/3295292f-6c29-4735-93c7-9b82701933a0.webm" type="video/mp4">
         </video>
       </div>
 
@@ -137,7 +147,7 @@
 
   <!-- Background video -->
   <video class="bg-video" autoplay muted loop playsinline>
-    <source src="/img/ffa2d99f-c825-445c-9cc3-dbbe414995a9.webm" type="video/webm">
+    <source src="img/ffa2d99f-c825-445c-9cc3-dbbe414995a9.webm" type="video/webm">
     Your browser does not support the video tag.
   </video>
 
@@ -156,11 +166,9 @@
         </h1>
       </div>
 
-      <!-- glowing orb -->
-      <div class="orb"></div>
 
       <!-- iceberg image -->
-      <img src="/img/iceb_1.png" alt="Iceberg" class="icebergs">
+      <img src="img/iceb_1.png" alt="Iceberg" class="icebergs">
     </section>
   </div>
 
@@ -193,23 +201,23 @@
 
 
       <!-- iceberg images -->
-      <img src="/img/iceb_2.png" alt="Iceberg Left" class="iceberg-left">
+      <img src="img/iceb_2.png" alt="Iceberg Left" class="iceberg-left">
 
 
       <!-- dots -->
       <div class="dots">
         <div class="dot-item active">
-          <img src="/img/Untitled design.gif" alt="Vision">
+          <img src="img/Untitled design.gif" alt="Vision">
           <p>Door Pick </p>
         </div>
 
         <div class="dot-item">
-          <img src="/img/Untitled design.gif" alt="Strategy">
+          <img src="img/Untitled design.gif" alt="Strategy">
           <p>Vessel Planning </p>
         </div>
 
         <div class="dot-item">
-          <img src="/img/Untitled design.gif" alt="Execution">
+          <img src="img/Untitled design.gif" alt="Execution">
           <p>Customs Clearances</p>
         </div>
       </div>
@@ -226,7 +234,7 @@
         <h1>
           Our mission is to empower businesses to thrive in a global
 
-          <span class="orb"></span>
+       
           marketplace by providing expert,
           <span class="fade-text">reliable, and integrated logistics solutions.</span>
         </h1>
@@ -234,7 +242,7 @@
 
       <!-- iceberg images -->
 
-      <img src="/img/iceb_1.png" alt="Iceberg Right" class="iceberg-right">
+      <img src="img/iceb_1.png" alt="Iceberg Right" class="iceberg-right">
     </section>
 
   </div>
@@ -431,6 +439,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
+          bottom: 119px;
     }
 
 
@@ -553,7 +562,7 @@
         flex-direction: column;
         position: relative;
         left: -176px;
-        top: 179px;
+        top: 134px;
         margin-bottom: 20px;
         gap: 10px;
 
@@ -618,12 +627,12 @@
 
 
   <!-- <div class="section-container"> -->
-  <h3 style="justify-content: center; margin-left: 150px;">About Us</h3>
+  <h3 style="justify-content: center; margin-left: 150px; font-size: 28px; font-weight: 600;">About Us</h3>
   <section class="new-section" id="about">
     <!-- Left Image -->
 
     <div class="new-section-image">
-      <img src="img/f1e367669576572baa7ab74d0e561d99.jpg" alt="Modern Ship Design">
+      <img src="imgs/Untitled design (7).png" alt="Modern Ship Design">
     </div>
 
     <!-- Right Text -->
@@ -645,7 +654,7 @@
     <div class="contact-form__container">
       <!-- Left Side -->
       <div class="contact-form__left">
-        <div class="contact-form__glow-circle"></div>
+        <!-- <div class="contact-form__glow-circle"></div> -->
         <h1 class="contact-form__title">
           A similar call to action <br>that invites direct engagement?
         </h1>
@@ -836,6 +845,30 @@
 
 
   </section>
+
+
+<section class="gallery-slider">
+  <div class="swiper gallery-swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide"><img src="imgs/WhatsApp Image 2025-11-26 at 13.19.55_06834c31.jpg" alt="Gallery Image"></div>
+      <div class="swiper-slide"><img src="imgs/WhatsApp Image 2025-11-26 at 13.19.55_1f06d4e6.jpg" alt="Gallery Image"></div>
+      <div class="swiper-slide"><img src="imgs/WhatsApp Image 2025-11-26 at 13.19.56_91c5eb28.jpg" alt="Gallery Image"></div>
+      <div class="swiper-slide"><img src="imgs/5.png" alt="Gallery Image"></div>
+      <div class="swiper-slide"><img src="imgs/7.png" alt="Gallery Image"></div>
+      <div class="swiper-slide"><img src="imgs/8.png" alt="Gallery Image"></div>
+      <div class="swiper-slide"><img src="imgs/4.png" alt="Gallery Image"></div>
+      <div class="swiper-slide"><img src="imgs/3.png" alt="Gallery Image"></div>
+      <div class="swiper-slide"><img src="imgs/2.png" alt="Gallery Image"></div>
+      <div class="swiper-slide"><img src="imgs/1.png" alt="Gallery Image"></div>
+
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
 
 
 
@@ -1069,6 +1102,34 @@
       scale: 1.05
     });
   </script>
+
+  <script>
+function playSound() {
+  let audio = document.getElementById("bgSound");
+  audio.play();
+}
+</script>
+
+
+<script>
+  var swiper = new Swiper(".gallery-swiper", {
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+
 </body>
 
 </html>

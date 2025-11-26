@@ -244,7 +244,7 @@
     }
 
     .logo {
-      width: 30px;
+      width: 90px;
       height: auto;
     }
 
@@ -665,18 +665,7 @@
       color: #1ab6d9;
     }
 
-    /* glowing orb */
-    .orb {
-      position: absolute;
-      bottom: 40%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      /* box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.6); */
-      z-index: 2;
-    }
+    
 
     /* iceberg */
     .icebergs {
@@ -945,17 +934,8 @@
       position: relative;
     }
 
-    /* Glowing orb inside text */
-    .orb {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: #fff;
-      box-shadow: 0 0 20px 8px rgba(0, 191, 255, 0.8);
-      vertical-align: middle;
-      margin: 0 6px;
-    }
+
+    
 
     /* Gradient fade out text effect */
     .fade-text {
@@ -1185,14 +1165,7 @@
     position: relative;
   }
 
-  .contact-form__glow-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 0 25px 10px #33d1ff;
-    margin-bottom: 25px;
-  }
+
 
   .contact-form__title {
     font-size: 2.8rem;
@@ -1322,19 +1295,14 @@
     }
   }
 
-
-    /* .iceberg-1, */
-    .iceberg-2,
-    .iceberg-3 {
-      /* transition: transform 0.4s ease; */
-    }
-
-    .iceberg-1:hover,
-    .iceberg-2:hover,
-    .iceberg-3:hover {
-      /* transform: scale(1.4); */
-      /* bigger on hover */
-    }
+@media (max-width: 1024px) {
+     .contact-form__container  {
+    display: flex;
+    flex-direction: column;
+   
+  }
+}
+  
 
     /* Keep your previous CSS + ADD this for list styling */
     .service-list {
@@ -1535,12 +1503,12 @@
   .iceberg-1 {
     width: 120vw;
     left: -11%;
-    top: 25px;
+    top: 450px;
   }
   .iceberg-2,
   .iceberg-3 {
     width: 120vw;
-    top: 87px;
+    top: 172px;
   }
 }
 
@@ -1784,8 +1752,8 @@
     }
 
     .new-section-image img {
-      width: 100%;
-      max-width: 500px;
+     width: 700px;
+      max-width: 400px;
       border-radius: 20px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease;
@@ -1833,6 +1801,8 @@
         .new-section {
           flex-direction: column;
           text-align: center;
+          margin-bottom: 148px;
+          gap: -10px;
         }
 
         .new-section-content {
@@ -1841,20 +1811,24 @@
       }
 
       /* ==== FIX ABOUT SECTION ==== */
-/* @media (max-width: 768px) {
-  .new-section {
-    flex-direction: column;
-    display: flex;
-    text-align: center;
-    gap: 20px;
-  }
-
+ @media (max-width: 768px) {
+  
+  
   .new-section-image img {
     max-width: 100%;
     height: auto;
   }
-} */
   
+} 
+  
+
+@media (max-width: 1024px) {
+   .new-section {
+          flex-direction: column;
+          text-align: center;
+        
+        }
+}
 
 
 
@@ -1967,10 +1941,7 @@ input[type=text], input[type=number], select {
 }
 
 
-@media (max-width: 1024px) {
-  .iceberg-1 { width: 120vw; left: -11%; top: 270px; }
-  .iceberg-2, .iceberg-3 { width: 120vw; top: 118px; }
-}
+
 @media (max-width: 768px) {
   .hero-text svg { width: 95vw; font-size: 4rem; }
   .iceberg-1 { top: 21.5%; left: -25%; width: 155vw; }
@@ -2126,3 +2097,63 @@ input[type=text], input[type=number], select {
     }
   }
 
+/* Slider Section */
+.gallery-slider {
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* Swiper Container */
+.gallery-swiper {
+  width: 50%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Slides */
+.swiper-slide {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.swiper-slide img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+/* Pagination Dots */
+.swiper-pagination-bullet {
+  background: #fff !important;
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+  background: #4f46e5 !important;
+}
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .gallery-swiper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-swiper {
+    width: 100%;
+  }
+}
